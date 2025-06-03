@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Take Quiz</title></head>
+<body>
+  <h1>Quiz</h1>
+  <form method="post">
+    {% for q in questions %}
+      <p>{{ q.question_text }}</p>
+      <input name="answer_{{ q.id }}" />
+    {% endfor %}
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
